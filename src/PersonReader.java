@@ -9,7 +9,7 @@ public class PersonReader {
     public static void main(String[] args) {
         ArrayList<Person> people = new ArrayList<>();  // ArrayList to store Person objects
 
-        // Open JFileChooser to select the file
+        
         JFileChooser chooser = new JFileChooser(new File("src"));  // Start JFileChooser in the src directory
         int result = chooser.showOpenDialog(null);
 
@@ -17,7 +17,7 @@ public class PersonReader {
             File file = chooser.getSelectedFile();
             System.out.println("Selected file: " + file.getAbsolutePath());
 
-            // Try to open and read the file
+            
             try (Scanner scanner = new Scanner(file)) {
                 System.out.println(String.format("%-10s %-15s %-15s %-15s %-10s", "ID#", "Firstname", "Lastname", "Title", "YOB"));
                 System.out.println("============================================================");
@@ -26,7 +26,7 @@ public class PersonReader {
                     String line = scanner.nextLine();
                     String[] data = line.split(",");  // Split the line by commas to extract the fields
 
-                    // Ensure that we have exactly 5 fields (ID, firstName, lastName, title, YOB)
+                    
                     if (data.length == 5) {
                         String id = data[0];
                         String firstName = data[1];
@@ -40,11 +40,11 @@ public class PersonReader {
                             continue;  // Skip this record and continue with the next one
                         }
 
-                        // Instantiate a Person object and add it to the ArrayList
+                        
                         Person person = new Person(firstName, lastName, id, title, yob);
                         people.add(person);
 
-                        // Display the person data in a formatted way
+                        
                         System.out.println(String.format("%-10s %-15s %-15s %-15s %-10d",
                                 person.getID(), person.getFirstName(), person.getLastName(), person.getTitle(), person.getYOB()));
                     } else {
@@ -59,7 +59,7 @@ public class PersonReader {
             System.out.println("File selection canceled.");
         }
 
-        // Display how many Person objects were read
+       
         System.out.println("Number of people read: " + people.size());
     }
 }
