@@ -1,17 +1,9 @@
 import java.util.Scanner;
 
-/**
- * Utility class for safe console input handling with static methods.
- */
+
 public class SafeInput {
 
-    /**
-     * Gets a non-empty string input from the user.
-     *
-     * @param in    The Scanner object to read input from.
-     * @param prompt The prompt to display to the user.
-     * @return The non-empty string input from the user.
-     */
+   
     public static String getNonEmptyString(Scanner in, String prompt) {
         String input;
         do {
@@ -21,13 +13,7 @@ public class SafeInput {
         return input;
     }
 
-    /**
-     * Gets a double input from the user.
-     *
-     * @param pipe  The Scanner object to read input from.
-     * @param prompt The prompt to display to the user.
-     * @return The double input from the user.
-     */
+   
     public static double getDouble(Scanner pipe, String prompt) {
         double result = 0;
         boolean done = false;
@@ -47,15 +33,7 @@ public class SafeInput {
         return result;
     }
 
-    /**
-     * Gets an integer input within a specified range from the user.
-     *
-     * @param in    The Scanner object to read input from.
-     * @param prompt The prompt to display to the user.
-     * @param min   The minimum valid value (inclusive).
-     * @param max   The maximum valid value (inclusive).
-     * @return The integer input from the user within the specified range.
-     */
+   
     public static int getRangedInt(Scanner in, String prompt, int min, int max) {
         int result = 0;
         boolean valid = false;
@@ -76,15 +54,7 @@ public class SafeInput {
         return result;
     }
 
-    /**
-     * Gets an integer input from the user.
-     *
-     * @param in    The Scanner object to read input from.
-     * @param prompt The prompt to display to the user.
-     * @param min   The minimum valid value (inclusive).
-     * @param max   The maximum valid value (inclusive).
-     * @return The integer input from the user within the specified range.
-     */
+   
     public static int getInt(Scanner in, String prompt, int min, int max) {
         int result = 0;
         boolean valid = false;
@@ -105,13 +75,7 @@ public class SafeInput {
         return result;
     }
 
-    /**
-     * Gets a Y/N confirmation from the user.
-     *
-     * @param in    The Scanner object to read input from.
-     * @param prompt The prompt to display to the user.
-     * @return True if the user input is "Y" or "y", false if it is "N" or "n".
-     */
+   
     public static boolean getYNConfirm(Scanner in, String prompt) {
         boolean retVal = true;
         String response = "";
