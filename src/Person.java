@@ -7,7 +7,7 @@ public class Person {
     private String title;
     private int YOB;
 
-    // Constructor
+
     public Person(String firstName, String lastName, String ID, String title, int YOB) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -16,7 +16,7 @@ public class Person {
         this.YOB = YOB;
     }
 
-    // Getters
+ 
     public String getFirstName() {
         return firstName;
     }
@@ -37,7 +37,7 @@ public class Person {
         return YOB;
     }
 
-    // Setters
+  
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -58,7 +58,7 @@ public class Person {
         }
     }
 
-    // Methods
+  
     public String fullName() {
         return firstName + " " + lastName;
     }
@@ -79,18 +79,18 @@ public class Person {
         return String.valueOf(age);
     }
 
-    // Convert to CSV
+   
     public String toCSV() {
         return String.format("%s,%s,%s,%s,%d", ID, firstName, lastName, title, YOB);
     }
 
-    // Convert to JSON
+
     public String toJSON() {
         return String.format("{\"ID\":\"%s\", \"firstName\":\"%s\", \"lastName\":\"%s\", \"title\":\"%s\", \"YOB\":%d}",
                 ID, firstName, lastName, title, YOB);
     }
 
-    // Convert to XML
+  
     public String toXML() {
         return String.format("<Person><ID>%s</ID><FirstName>%s</FirstName><LastName>%s</LastName><Title>%s</Title><YOB>%d</YOB></Person>",
                 ID, firstName, lastName, title, YOB);
